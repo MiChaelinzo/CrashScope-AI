@@ -33,4 +33,6 @@ Further Considerations for AI Development:
 Disclaimer:
 This script remains a basic illustration and should not be used in actual autonomous driving systems. Real-world implementations require rigorous engineering, safety measures, and adherence to ethical guidelines.
 
+<img width="797" alt="Screenshot 2024-04-27 175527" src="https://github.com/MiChaelinzo/CrashScope-AI/assets/68110223/4afe143f-45ab-498e-927e-fc0cff8b6ff4">
+
 
