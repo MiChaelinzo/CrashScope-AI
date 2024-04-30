@@ -38,7 +38,17 @@ def plan_path(obstacles, lane_position):
     return "STEER_RIGHT"
 
 def control_car(action, lane_position):
-  # ... (similar to previous versions, with added steering actions)
+  if action == "BRAKE":
+    print("Applying brakes...")
+  elif action == "STEER":
+    if lane_position < 0:
+      print("Steering right...")
+    else:
+      print("Steering left...")
+  elif action == "ACCELERATE":
+    print("Accelerating...")
+  else:
+    print("Invalid action.")
 
 while True:
   obstacles, lane_position = sense_environment()
