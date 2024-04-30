@@ -29,9 +29,20 @@ Further Considerations for AI Development:
 - Advanced Prediction Models: Implement more sophisticated prediction models using machine learning techniques like recurrent neural networks (RNNs) or long short-term memory (LSTM) networks to capture complex temporal patterns and dependencies in traffic behavior.
 - Behavior Cloning: Train AI models on human driving data to learn and replicate safe driving behaviors, adapting to various scenarios and road conditions.
 - Reinforcement Learning: Explore reinforcement learning techniques to train AI agents that can learn optimal driving strategies through trial and error in a simulated environment, leading to more adaptable and intelligent decision-making.
+- Multiple Obstacles: The script now handles a list of obstacles, each represented by its distance and angle relative to the car's heading.
+-Path Planning: The plan_path function implements a basic path planning strategy, prioritizing avoiding the closest obstacle by braking or steering away from its path.
+- Dynamic Obstacles: Obstacles are now predicted to have relative speed and acceleration, making their behavior more realistic.
+- Trajectory Planning: The script evaluates multiple potential steering angles and selects the one that minimizes the overall risk based on predicted obstacle trajectories and lane position.
+
+
+Challenges and Considerations:
+- Computational Complexity: Handling multiple obstacles and performing real-time path planning require efficient algorithms and sufficient computational resources.
+- Sensor Limitations: Real-world sensors have limitations in range, accuracy, and update rates, which need to be considered in the decision-making process.
+- Safety and Validation: Thorough testing and validation are crucial to ensure the safety and reliability of any path planning and obstacle avoidance system.
+
 
 Disclaimer:
-This script remains a basic illustration and should not be used in actual autonomous driving systems. Real-world implementations require rigorous engineering, safety measures, and adherence to ethical guidelines.
+This enhanced script demonstrates the increasing complexity of AI-based driving systems as more advanced functionalities are introduced. Continued research and development are essential to address these challenges and achieve safe and efficient autonomous driving.
 
 <img width="797" alt="Screenshot 2024-04-27 175527" src="https://github.com/MiChaelinzo/CrashScope-AI/assets/68110223/4afe143f-45ab-498e-927e-fc0cff8b6ff4">
 
