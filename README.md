@@ -33,16 +33,21 @@ Further Considerations for AI Development:
 -Path Planning: The plan_path function implements a basic path planning strategy, prioritizing avoiding the closest obstacle by braking or steering away from its path.
 - Dynamic Obstacles: Obstacles are now predicted to have relative speed and acceleration, making their behavior more realistic.
 - Trajectory Planning: The script evaluates multiple potential steering angles and selects the one that minimizes the overall risk based on predicted obstacle trajectories and lane position.
+- Cost Function: The cost_function evaluates the overall cost of a trajectory based on the combined risk of collisions with obstacles and the penalty for deviating from the lane center. This allows for a more nuanced evaluation of trajectory options.
+- Optimization Approach: The script now samples multiple steering angles and selects the one that minimizes the cost function, leading to a more optimal trajectory selection.
 
 
 Challenges and Considerations:
 - Computational Complexity: Handling multiple obstacles and performing real-time path planning require efficient algorithms and sufficient computational resources.
 - Sensor Limitations: Real-world sensors have limitations in range, accuracy, and update rates, which need to be considered in the decision-making process.
 - Safety and Validation: Thorough testing and validation are crucial to ensure the safety and reliability of any path planning and obstacle avoidance system.
+- Cost Function Design: Defining a comprehensive and effective cost function is crucial for achieving desired driving behavior and balancing different objectives.
+- Optimization Efficiency: Optimization algorithms can be computationally expensive, requiring efficient implementations and potentially hardware acceleration for real-time applications.
+- Uncertainty and Noise: Real-world sensor data and predictions contain uncertainties and noise, which need to be accounted for in the planning process.
 
 
 Disclaimer:
-This enhanced script demonstrates the increasing complexity of AI-based driving systems as more advanced functionalities are introduced. Continued research and development are essential to address these challenges and achieve safe and efficient autonomous driving.
+This version showcases the integration of optimization techniques for trajectory planning, further refining the decision-making capabilities of the AI car. Continued research and development in these areas are critical for achieving safe and reliable autonomous driving systems.
 
 <img width="797" alt="Screenshot 2024-04-27 175527" src="https://github.com/MiChaelinzo/CrashScope-AI/assets/68110223/4afe143f-45ab-498e-927e-fc0cff8b6ff4">
 
