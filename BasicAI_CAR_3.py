@@ -31,7 +31,17 @@ def make_decision(current_risk, predicted_risk):
     return "ACCELERATE"
 
 def control_car(action, lane_position):
-  # ... (same as previous version)
+  if action == "BRAKE":
+    print("Applying brakes...")
+  elif action == "STEER":
+    if lane_position < 0:
+      print("Steering right...")
+    else:
+      print("Steering left...")
+  elif action == "ACCELERATE":
+    print("Accelerating...")
+  else:
+    print("Invalid action.")
 
 while True:
   obstacle_distance, lane_position, relative_speed = sense_environment()
